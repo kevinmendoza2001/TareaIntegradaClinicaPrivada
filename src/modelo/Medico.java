@@ -1,9 +1,9 @@
 package modelo;
 
 public class Medico extends Empleado {
-    private String especialidad;
-    private int numeroPacientesAtendidos;
-    private double valorConsulta;
+    private final String especialidad;
+    private final int numeroPacientesAtendidos;
+    private final double valorConsulta;
 
     // Utilizamos el Super para indicar que vamos a usar todo el contenido dentro de esta clase
     public Medico(String cedula, String nombre, int edad, String telefono, String correo,
