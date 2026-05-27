@@ -2,7 +2,7 @@ package app;
 
 // Aquí podemos observar que necesitamos importar cada uno de los paquetes
 // de esta manera procuramos enlazarlos y así conseguir conexión con
-// cada uno de ellos
+// cada uno de los paquetes y sus clases.
 import modelo.*;
 import servicio.EmpleadoServicio;
 import util.Validador;
