@@ -1,5 +1,8 @@
 package app;
 
+// Aquí podemos observar que necesitamos importar cada uno de los paquetes
+// de esta manera procuramos enlazarlos y así conseguir conexión con
+// cada uno de ellos
 import modelo.*;
 import servicio.EmpleadoServicio;
 import util.Validador;
@@ -7,9 +10,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Declaramos Scanner dado que necesitamos ingresar por medio del usuario
         Scanner sc = new Scanner(System.in);
         EmpleadoServicio servicio = new EmpleadoServicio();
 
+        // La forma más correcta de generar un menú es usando do-while junto
+        // a un switch, de esta manera considero que es más apropiado entrar
+        // a cada uno de los paquetes
         int opcion = 0;
         do {
             System.out.println("===== CLÍNICA SALUD TOTAL =====");
@@ -23,13 +30,15 @@ public class Main {
             System.out.println("8. Mostrar estadísticas");
             System.out.println("9. Salir");
 
+            // Usamos try-catch para manejar excepciones de forma correcta
             try {
                 opcion = Integer.parseInt(sc.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println("Error: opción inválida.");
                 continue;
             }
-
+            // Dentro de cada caso del switch ingresamos cada registro,
+            // busqueda, eliminación, cálculo de nuestro menú.
             switch (opcion) {
                 case 1: // Registrar médico
                     try {
