@@ -2,11 +2,11 @@ package modelo;
 
 public abstract class Empleado {
     // Encapsulamiento de atributos privados
-    private String cedula;
-    private String nombre;
-    private int edad;
-    private String telefono;
-    private String correo;
+    private final String cedula;
+    private final String nombre;
+    private final int edad;
+    private final String telefono;
+    private final String correo;
 
     // Aplicamos un constructor para cada uno de los atributos dentro del encapsulamiento
     public Empleado(String cedula, String nombre, int edad, String telefono, String correo) {
