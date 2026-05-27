@@ -8,7 +8,7 @@ public abstract class Empleado {
     private String telefono;
     private String correo;
 
-    // Constructor
+    // Aplicamos un constructor para cada uno de los atributos dentro del encapsulamiento
     public Empleado(String cedula, String nombre, int edad, String telefono, String correo) {
         this.cedula = cedula;
         this.nombre = nombre;
@@ -17,11 +17,11 @@ public abstract class Empleado {
         this.correo = correo;
     }
 
-    // Getters y setters (encapsulamiento)
+    // Usamos getters
     public String getCedula() { return cedula; }
     public String getNombre() { return nombre; }
-    public int getEdad() { return edad; }
 
+    // Usamos un metodo void para imprimir la información
     public void mostrarInformacion() {
         System.out.println("Cédula: " + cedula);
         System.out.println("Nombre: " + nombre);
@@ -29,7 +29,7 @@ public abstract class Empleado {
         System.out.println("Teléfono: " + telefono);
         System.out.println("Correo: " + correo);
     }
-
+    // Usamos un metodo abstracto, el cual indica que es necesario su uso
     public abstract double calcularPago();
 }
 
